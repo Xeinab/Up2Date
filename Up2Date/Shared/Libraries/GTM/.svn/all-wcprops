@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wavemark/!svn/ver/29239/MobileHospital/iOS/trunk/libs/GTM
+END
+GTMOAuthAuthentication.m
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wavemark/!svn/ver/20888/MobileHospital/iOS/trunk/libs/GTM/GTMOAuthAuthentication.m
+END
+GTMHTTPUploadFetcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPUploadFetcher.h
+END
+GTMHTTPFetcher.m
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wavemark/!svn/ver/29239/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcher.m
+END
+GTMMIMEDocument.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMMIMEDocument.h
+END
+GTMHTTPFetcherLogging.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcherLogging.h
+END
+GTMHTTPUploadFetcher.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPUploadFetcher.m
+END
+GTMMIMEDocument.m
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMMIMEDocument.m
+END
+GTMHTTPFetcherLogging.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcherLogging.m
+END
+GTMHTTPFetcherService.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcherService.h
+END
+GTMHTTPFetcherService.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcherService.m
+END
+GTMGatherInputStream.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMGatherInputStream.h
+END
+GTMHTTPFetchHistory.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetchHistory.h
+END
+GTMGatherInputStream.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMGatherInputStream.m
+END
+GTMOAuthAuthentication.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMOAuthAuthentication.h
+END
+GTMHTTPFetcher.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetcher.h
+END
+GTMHTTPFetchHistory.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wavemark/!svn/ver/17790/MobileHospital/iOS/trunk/libs/GTM/GTMHTTPFetchHistory.m
+END
