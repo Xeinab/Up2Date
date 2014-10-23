@@ -11,24 +11,16 @@
 
 @implementation RestParser
 
-+(NSMutableArray*)parseNewsData :(NSDictionary*)jsonAllData
++(NSMutableArray*)parseNewsData :(NSArray*)jsonAllData
 {
     NSMutableArray *news = [NSMutableArray array];
     
-    NSArray *feedsArray = ([jsonAllData valueForKey:@"feeds"]  == (NSArray *) [NSNull null] ? @"" : [jsonAllData valueForKey:@"feeds"]);
-    if ([feedsArray count] > 0)
+    for (int i=0;i<[jsonAllData count];i++)
     {
-        for (int i=0;i<[feedsArray count];i++)
-        {
-            NSDictionary *feedsDictionary = [feedsArray objectAtIndex:i];
-            NSDictionary *subFeedsDictionary = [feedsDictionary valueForKey:@"feeds"];
-            for (NSDictionary *feed in subFeedsDictionary)
-            {
-                NSString *newsTitle =  ([feed valueForKey:@"title"]  == (NSString *) [NSNull null] ? @"" : [feed valueForKey:@"title"]);
-                [news addObject:newsTitle];
-            }
-            
-        }
+        NSDictionary *feedsDictionary = [jsonAllData objectAtIndex:i];
+        NSString *newsTitle =  ([feedsDictionary valueForKey:@"newsTitle"]  == (NSString *) [NSNull null] ? @"" : [feedsDictionary valueForKey:@"newsTitle"]);
+        [news addObject:newsTitle];
+        
     }
     return news;
 }

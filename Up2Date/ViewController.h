@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController
 {
     UIView *newsTitleView;
+    BOOL isDoneRefreshingData;
 }
 
 @property(nonatomic,retain) IBOutlet UIView *newsTitleView;

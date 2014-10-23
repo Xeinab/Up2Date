@@ -1,0 +1,11 @@
+/* 
+  File.strings
+  Up2Date
+
+  Created by Zee on 10/23/14.
+  Copyright (c) 2014 apps2you. All rights reserved.
+*/
+
+
+"U2D_NO_DATA_EXITS" = "*  لا معلومات حالياً  *";
+"U2D_ERROR_OCCURRED" = "*  حصل خطأ أثناء تنزيل المعلومات  *";

@@ -11,6 +11,6 @@
 @interface RestParser : NSObject
 
 
-+(NSMutableArray*)parseNewsData :(NSDictionary*)jsonAllData;
++(NSMutableArray*)parseNewsData :(NSArray*)jsonAllData;
 
 @end

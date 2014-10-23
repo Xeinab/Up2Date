@@ -9,6 +9,7 @@
 #import "Webservices.h"
 #import "WError.h"
 #import "SBJson.h"
+#import "MiscFunctionalities.h"
 
 @implementation Webservices
 
@@ -17,7 +18,14 @@
     webservicesDelegate = delegate;
     webservicesSelector = finishedSelector;
     
-    url = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"WebservicesURL"];
+    if ([MiscFunctionalities isArabicSupported])
+    {
+        url = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"WebservicesURL_AR"];
+    }
+    else
+    {
+        url = [[NSBundle mainBundle]objectForInfoDictionaryKey:@"WebservicesURL"];
+    }
     
     NSURL *mergedURL = [NSURL URLWithString:url];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:mergedURL];

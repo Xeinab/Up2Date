@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876B66E519F9909700E8725A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 876B66E719F9909700E8725A /* Localizable.strings */; };
+		876B66EB19F992DA00E8725A /* MiscFunctionalities.m in Sources */ = {isa = PBXBuildFile; fileRef = 876B66EA19F992DA00E8725A /* MiscFunctionalities.m */; };
 		87BCB50B19F712C100AEA969 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87BCB50A19F712C100AEA969 /* AppIcon.png */; };
 		87DBF23D19F7003A004429F7 /* Webservices.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DBF23C19F7003A004429F7 /* Webservices.m */; };
 		87DBF25519F70121004429F7 /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DBF24619F70121004429F7 /* GTMGatherInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -53,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		876B66E319F9908000E8725A /* ar-001 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-001"; path = "ar-001.lproj/Main.strings"; sourceTree = "<group>"; };
+		876B66E419F9908000E8725A /* ar-001 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-001"; path = "ar-001.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		876B66E619F9909700E8725A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		876B66E819F9909C00E8725A /* ar-001 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-001"; path = "ar-001.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		876B66E919F992DA00E8725A /* MiscFunctionalities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscFunctionalities.h; path = Shared/MiscFunctionalities.h; sourceTree = "<group>"; };
+		876B66EA19F992DA00E8725A /* MiscFunctionalities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscFunctionalities.m; path = Shared/MiscFunctionalities.m; sourceTree = "<group>"; };
 		87BCB50A19F712C100AEA969 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcon.png; path = Images/AppIcon.png; sourceTree = "<group>"; };
 		87DBF23B19F7003A004429F7 /* Webservices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Webservices.h; path = Shared/Webservices.h; sourceTree = "<group>"; };
 		87DBF23C19F7003A004429F7 /* Webservices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Webservices.m; path = Shared/Webservices.m; sourceTree = "<group>"; };
@@ -148,6 +156,7 @@
 		87DBF23619F6FFC0004429F7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				876B66E719F9909700E8725A /* Localizable.strings */,
 				87DBF24219F70102004429F7 /* Libraries */,
 				87DBF23B19F7003A004429F7 /* Webservices.h */,
 				87DBF23C19F7003A004429F7 /* Webservices.m */,
@@ -157,6 +166,8 @@
 				87DBF28619F7022B004429F7 /* RestParser.m */,
 				87DBF28819F70257004429F7 /* NewsData.h */,
 				87DBF28919F70257004429F7 /* NewsData.m */,
+				876B66E919F992DA00E8725A /* MiscFunctionalities.h */,
+				876B66EA19F992DA00E8725A /* MiscFunctionalities.m */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -350,6 +361,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ar-001",
 			);
 			mainGroup = 87DF344519F6E7A80098CB4B;
 			productRefGroup = 87DF344F19F6E7AA0098CB4B /* Products */;
@@ -371,6 +383,7 @@
 				87DF346019F6E7AC0098CB4B /* Main.storyboard in Resources */,
 				87DF346519F6E7AC0098CB4B /* LaunchScreen.xib in Resources */,
 				87DF346219F6E7AC0098CB4B /* Images.xcassets in Resources */,
+				876B66E519F9909700E8725A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +409,7 @@
 				87DBF25919F70121004429F7 /* GTMHTTPFetchHistory.m in Sources */,
 				87DBF27719F7012C004429F7 /* SBJsonParser.m in Sources */,
 				87DBF25719F70121004429F7 /* GTMHTTPFetcherLogging.m in Sources */,
+				876B66EB19F992DA00E8725A /* MiscFunctionalities.m in Sources */,
 				87DBF25C19F70121004429F7 /* GTMOAuthAuthentication.m in Sources */,
 				87DBF27F19F7012C004429F7 /* SBJsonTokeniser.m in Sources */,
 				87DF345A19F6E7AC0098CB4B /* Up2Date.xcdatamodeld in Sources */,
@@ -438,10 +452,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		876B66E719F9909700E8725A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				876B66E619F9909700E8725A /* en */,
+				876B66E819F9909C00E8725A /* ar-001 */,
+			);
+			name = Localizable.strings;
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		87DF345E19F6E7AC0098CB4B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				87DF345F19F6E7AC0098CB4B /* Base */,
+				876B66E319F9908000E8725A /* ar-001 */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -450,6 +475,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87DF346419F6E7AC0098CB4B /* Base */,
+				876B66E419F9908000E8725A /* ar-001 */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

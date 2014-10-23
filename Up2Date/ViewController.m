@@ -10,7 +10,9 @@
 #import "Webservices.h"
 #import "WError.h"
 #import "RestParser.h"
+#import "MiscFunctionalities.h"
 
+#define TEXT_FONT [UIFont systemFontOfSize:14]
 
 @implementation ViewController
 @synthesize newsTitleView;
@@ -24,11 +26,12 @@
 
 -(void)downloadData
 {
+    isDoneRefreshingData = NO;
     Webservices* services = [[Webservices alloc]init];
     [services downloadNewsData:self :@selector(downloadNewsDataDone::)];
 }
 
--(void)downloadNewsDataDone:(NSDictionary *)callResult :(WError *)error
+-(void)downloadNewsDataDone:(NSArray *)callResult :(WError *)error
 {
     if (error == nil)
     {
@@ -36,23 +39,41 @@
         if ([newsList count]>0)
         {
             NSString *news = [newsList componentsJoinedByString:@"   *   "];
-            [self showData :news];
+            [self showNews :news];
         }
         else
         {
-            [self showData :@"*  No data to show  *"];
+            [self showNews :NSLocalizedString(@"U2D_NO_DATA_EXITS", @"")];
         }
     }
+    else
+    {
+        [self showNews :NSLocalizedString(@"U2D_ERROR_OCCURRED", @"")];
+    }
+    isDoneRefreshingData = YES;
 }
 
--(void)showData :(NSString*)news
+-(void)showNews :(NSString*)news
 {
-    CGSize expectedLabelSize = [news sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}];
+    BOOL isArabicSupported = [MiscFunctionalities isArabicSupported];
+
+    CGSize expectedLabelSize = [news sizeWithAttributes:@{NSFontAttributeName:TEXT_FONT}];
+    int textLength = expectedLabelSize.width + 50;
+    int xPosition = self.view.frame.size.width;
     
-    int textLength = expectedLabelSize.width * 1.5;
-    int screenWidth = self.view.frame.size.width;
+    UILabel *newsTitleLabel = [[UILabel alloc]init];
+    if (isArabicSupported)
+    {
+        newsTitleLabel.frame =CGRectMake( -textLength , 15, textLength, 50);
+        newsTitleLabel.textAlignment = NSTextAlignmentRight;
+    }
+    else
+    {
+        newsTitleLabel.frame =CGRectMake(xPosition, 15, textLength, 50);
+    }
+
     
-    UILabel *newsTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(screenWidth - 10, 15, textLength, 50)];
+    [newsTitleLabel setFont:TEXT_FONT];
     [newsTitleView addSubview:newsTitleLabel];
     newsTitleLabel.text = news;
     
@@ -60,15 +81,28 @@
     
     [UIView animateWithDuration:duration delay:0.0f options:UIViewAnimationOptionCurveLinear animations:^
      {
-         newsTitleLabel.frame = CGRectMake(-textLength, newsTitleLabel.frame.origin.y,textLength, newsTitleLabel.frame.size.height);
+         if (isArabicSupported)
+         {
+             newsTitleLabel.frame = CGRectMake(xPosition, newsTitleLabel.frame.origin.y,textLength, newsTitleLabel.frame.size.height);
+         }
+         else
+         {
+             newsTitleLabel.frame = CGRectMake(-textLength, newsTitleLabel.frame.origin.y,textLength, newsTitleLabel.frame.size.height);
+         }
+         
      } completion:^(BOOL finished)
      {
          [newsTitleLabel removeFromSuperview];
-         [self downloadData];
+         if (isDoneRefreshingData)
+         {
+             [self downloadData];
+         }
+         else
+         {
+            [self showNews :news];
+         }
      }];
 }
-
-
 
 -(void)viewDidAppear:(BOOL)animated
 {
